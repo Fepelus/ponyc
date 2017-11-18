@@ -840,6 +840,8 @@ test-ci: all
 
 docs: all
 	$(SILENT)$(PONY_BUILD_DIR)/ponyc packages/stdlib --docs --pass expr
+
+docs-ci: docs
 	$(SILENT)cp .docs/extra.js stdlib-docs/docs/
 	$(SILENT)sed -i 's/site_name:\ stdlib/site_name:\ Pony Standard Library/' stdlib-docs/mkdocs.yml
 
